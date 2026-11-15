@@ -2,7 +2,7 @@
 #include <fstream>
 #include <iostream>
 
-#include "utils/CRCpp/inc/CRC.h"
+#include "../utils/CRCpp/inc/CRC.h"
 
 int main(int argc, char *argv[]) {
   std::filesystem::path binFilePath;

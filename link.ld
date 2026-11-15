@@ -1,4 +1,4 @@
-ENTRY(trail);
+ENTRY(bootStage2);
 
 MEMORY
 {
@@ -8,10 +8,17 @@ MEMORY
 
 SECTIONS
 {
+    .boot2 :
+    {
+        _sboot2 = .;
+        *(.boot2*)                              /* bootStage2 function */
+        _eboot2 = .;
+        . = . + (252 - (_eboot2 - _sboot2));    /* Pad zeros, addCounter = addCounter + (252 - sizeOfBoot2) */
+        *(.crc*)                                /* 4 Byte CRC32 value */
+    } > flash
+
     .text :
     {
-        *(.boot2*)
-        . = ORIGIN(flash) + 252;
-        *(.crc*)
+        *(.text*)
     } > flash
 }
