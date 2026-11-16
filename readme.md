@@ -5,8 +5,7 @@
 A small Diwali lighting project. A Vicharak Shrike Lite (RP2040) switches groups of LEDs on and off through a 4-channel relay module to create different light patterns.
 
 ## Video/photos 
-
-
+https://drive.google.com/drive/folders/1FxILt0yC8CMYyY9mo8pWX6yfKJdEiMlt?usp=sharing
 
 
 ## Hardware
